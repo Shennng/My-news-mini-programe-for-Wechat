@@ -1,0 +1,59 @@
+/* pages/entry/entry.wxss */
+.head {
+  margin-top: 20rpx;
+  margin-bottom: 50rpx;
+  margin-left: 35rpx;
+  margin-right: 35rpx;
+}
+
+.title {
+  display: flex;
+  font-size: 45rpx;
+  line-height: 63rpx;
+  opacity: 0.9;
+  height: 180rpx;
+  align-items: center;
+}
+
+.others {
+  display: flex;
+  font-size: 25rpx;
+  line-height: 30rpx;
+  opacity: 0.7;
+}
+
+.date {
+  text-align: center;
+  padding-left: 40rpx;
+}
+
+.readCount {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.contents {
+  margin-left: 35rpx;
+  margin-right: 35rpx;
+  margin-bottom: 80rpx;
+}
+
+.contents-texts {
+  font-size: 30rpx;
+  line-height: 60rpx;
+  opacity: 0.8;
+  padding-top: 20rpx;
+}
+
+rich-text {
+  display: flex;
+  justify-content: center;
+}
+
+.bottom {
+  font-size: 20rpx;
+  line-height: 28rpx;
+  text-align: center;
+  opacity: 0.5;
+  margin-bottom: 30rpx;
+}

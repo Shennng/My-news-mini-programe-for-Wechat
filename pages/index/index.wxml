@@ -1,0 +1,41 @@
+<!--index.wxml-->
+
+<!--新闻类目栏-->
+<tab class="newsTypes-column" >
+  <view class="newsTypes" wx:for="{{['国内', '国际', '财经', '娱乐', '军事', '体育', '其他']}}">
+    <view class='newsType' 
+    style="{{ columnColor.newsType === item ? columnColor.colorDesc : ''}}"
+    data-newsType="{{item}}"
+    bindtap="onTapGetEntriesAndChangeColor">{{item}}</view>
+  </view>
+</tab>
+
+<!--新闻条目栏-->
+<view class="entries">
+  <!--头条-->
+  <view class="No1Entry" data-id="{{No1Entry.id}}" bindtap='onTapNavigateToEntry'>
+    <image class="No1Entry-image" src="{{No1Entry.firstImage}}"></image>
+    <view class="No1Entry-text">
+     <view class='No1Entry-title'>{{No1Entry.title}}</view>
+      <view class="No1Entry-SourceAndDate">
+        <view class="No1Entry-source">{{No1Entry.source}}</view>
+        <view class="No1Entry-date">{{No1Entry.date}}</view>
+      </view>
+    </view>
+  </view>
+  <!--其余条目-->
+  <view class="restEntries" wx:for="{{restEntries}}"
+  data-id="{{item.id}}" bindtap='onTapNavigateToEntry'>
+    <view class="restEntries-text">
+      <view class='restEntry-title'>{{item.title}}</view>
+      <view class="restEntries-SourceAndDate">
+        <view class="restEntry-source">{{item.source}}</view>
+        <view class="restEntry-date">{{item.date}}</view>
+      </view>
+    </view>
+      <image class="restEntry-image" 
+      src="{{item.firstImage}}"></image>
+    </view>
+  </view>
+
+  <view class="bottom">我可是有底线的~</view>
